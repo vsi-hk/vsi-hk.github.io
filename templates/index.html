@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>香港VSI有限公司 | VSI Hong Kong Limited</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        .hero-bg { 
+            background: linear-gradient(rgba(15, 23, 42, 0.8), rgba(15, 23, 42, 0.8)), 
+            url('https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&q=80&w=2070'); 
+            background-size: cover; 
+            background-position: center; 
+        }
+        .lang-zh, .lang-en, .lang-jp { display: none; }
+        .lang-active { display: block !important; }
+        .lang-inline-active { display: inline !important; }
+    </style>
+</head>
+<body class="bg-slate-50 text-slate-900 font-sans">
+
+    <nav class="bg-white shadow-md sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+            <div class="text-2xl font-bold text-slate-800">
+                <span class="lang-zh lang-active">香港VSI有限公司</span>
+<span class="lang-en">VSI Hong Kong Limited</span>
+<span class="lang-jp">VSI香港株式会社</span>
+            </div>
+            <div class="hidden md:flex space-x-6 text-sm font-medium items-center">
+                <div class="space-x-4 mr-4">
+                    <a href="#about" class="hover:text-blue-600">
+                        <span class="lang-zh lang-active">關於</span>
+                        <span class="lang-en">About</span>
+                        <span class="lang-jp">概要</span>
+                    </a>
+                    <a href="#products" class="hover:text-blue-600">
+                        <span class="lang-zh lang-active">產品</span>
+                        <span class="lang-en">Products</span>
+                        <span class="lang-jp">製品</span>
+                    </a>
+                </div>
+                <div class="flex bg-slate-100 rounded-full px-3 py-1 space-x-3 border">
+                    <button onclick="switchLang('zh')" id="btn-zh" class="text-blue-600 font-bold">CN</button>
+                    <button onclick="switchLang('en')" id="btn-en" class="hover:text-blue-600">EN</button>
+                    <button onclick="switchLang('jp')" id="btn-jp" class="hover:text-blue-600">JP</button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <header class="hero-bg text-white px-6 flex" style="height: 50vh;">
+        <div class="max-w-4xl m-auto text-center">
+            <h1 class="text-4xl md:text-6xl font-extrabold mb-6">
+                <span class="lang-zh lang-active text-white">您的專屬連接需求方案解決夥伴</span>
+                <span class="lang-en">Your Dedicated Partner for Precision Connectivity Solutions</span>
+                <span class="lang-jp">お客様専属の接続ソリューションパートナー</span>
+            </h1>
+            <p class="text-xl text-slate-300 mb-8">
+                <span class="lang-zh lang-active">專注非標定制，定義高精度、長壽命、高穩定性的行業標準。</span>
+                <span class="lang-en">Specializing in custom solutions, we define industry standards for high precision, long life, and high stability.</span>
+                <span class="lang-jp">高精度・長寿命・高安定性の業界標準を定義する、オーダーメイドソリューションを専門としています。</span>
+            </p>
+        </div>
+    </header>
+
+    <section class="py-20 px-6 max-w-7xl mx-auto text-center" id="about">
+        <h2 class="text-3xl font-bold mb-12">
+            <span class="lang-zh lang-active">為何選擇 VSI？</span>
+            <span class="lang-en">Why Choose VSI?</span>
+            <span class="lang-jp">VSIが選ばれる理由</span>
+        </h2>
+        <div class="grid md:grid-cols-3 gap-12">
+            <div>
+                <div class="text-blue-600 text-4xl mb-4">⚙️</div>
+                <h3 class="text-xl font-bold mb-2">
+                    <span class="lang-zh lang-active">高精度加工</span>
+                    <span class="lang-en">Precision Machining</span>
+                    <span class="lang-jp">高精度加工</span>
+                </h3>
+                <p class="text-slate-600 text-sm">
+                    <span class="lang-zh lang-active">精密設備確保接口一致性與尺寸精度，實現完美匹配。</span>
+                    <span class="lang-en">Our precision equipment ensures interface consistency and dimensional accuracy for a perfect match.</span>
+                    <span class="lang-jp">当社の精密機器は、完璧なマッチングのためにインターフェースの一貫性と寸法精度を保証します。</span>
+                </p>
+            </div>
+            <div>
+                <div class="text-blue-600 text-4xl mb-4">🔋</div>
+                <h3 class="text-xl font-bold mb-2">
+                    <span class="lang-zh lang-active">超長使用壽命</span>
+                    <span class="lang-en">Extended Lifespan</span>
+                    <span class="lang-jp">長寿命</span>
+                </h3>
+                <p class="text-slate-600 text-sm">
+                    <span class="lang-zh lang-active">精選材料結合優化工藝，產品耐受100,000+次彎折與插拔。</span>
+                    <span class="lang-en">Selected materials and optimized processes ensure our products withstand over 100,000 bending and mating cycles.</span>
+                    <span class="lang-jp">厳選された素材と最適化されたプロセスにより、当社の製品は100,000回以上の曲げおよび嵌合サイクルに耐えることができます。</span>
+                </p>
+            </div>
+            <div>
+                <div class="text-blue-600 text-4xl mb-4">💎</div>
+                <h3 class="text-xl font-bold mb-2">
+                    <span class="lang-zh lang-active">超高穩定性</span>
+                    <span class="lang-en">Ultra Stability</span>
+                    <span class="lang-jp">超高安定性</span>
+                </h3>
+                <p class="text-slate-600 text-sm">
+                    <span class="lang-zh lang-active">嚴格品控保障電氣參數高度穩定，信號傳輸無損可靠。</span>
+                    <span class="lang-en">Strict quality control guarantees highly stable electrical parameters and reliable, lossless signal transmission.</span>
+                    <span class="lang-jp">厳格な品質管理により、非常に安定した電気的パラメータと信頼性の高い無損失の信号伝送が保証されます。</span>
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <section class="bg-slate-100 py-20 px-6" id="products">
+        <div class="max-w-7xl mx-auto">
+            <h2 class="text-3xl font-bold mb-12 text-center">
+                <span class="lang-zh lang-active">關鍵領域應用</span>
+                <span class="lang-en">Key Applications</span>
+                <span class="lang-jp">主な応用分野</span>
+            </h2>
+            <div class="grid md:grid-cols-3 gap-8 text-center">
+                <div class="bg-white p-8 rounded-xl shadow-sm">
+                    <h3 class="font-bold text-blue-600 mb-2">
+                        <span class="lang-zh lang-active">醫療</span>
+                        <span class="lang-en">Medical</span>
+                        <span class="lang-jp">医療</span>
+                    </h3>
+                    <p class="text-sm">
+                        <span class="lang-zh lang-active">家庭醫療保健設備連接</span>
+                        <span class="lang-en">Home healthcare equipment connections</span>
+                        <span class="lang-jp">在宅医療機器の接続</span>
+                    </p>
+                </div>
+                <div class="bg-white p-8 rounded-xl shadow-sm">
+                    <h3 class="font-bold text-blue-600 mb-2">
+                        <span class="lang-zh lang-active">通信</span>
+                        <span class="lang-en">Communication</span>
+                        <span class="lang-jp">通信</span>
+                    </h3>
+                    <p class="text-sm">
+                        <span class="lang-zh lang-active">專業通信與數據傳輸</span>
+                        <span class="lang-en">Professional communication and data transmission</span>
+                        <span class="lang-jp">プロフェッショナルな通信とデータ伝送</span>
+                    </p>
+                </div>
+                <div class="bg-white p-8 rounded-xl shadow-sm">
+                    <h3 class="font-bold text-blue-600 mb-2">
+                        <span class="lang-zh lang-active">音頻</span>
+                        <span class="lang-en">Audio</span>
+                        <span class="lang-jp">オーディオ</span>
+                    </h3>
+                    <p class="text-sm">
+                        <span class="lang-zh lang-active">高品質音視頻系統</span>
+                        <span class="lang-en">High-quality audio and video systems</span>
+                        <span class="lang-jp">高品質のオーディオおよびビデオシステム</span>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-slate-900 text-slate-400 py-12 px-6 text-center text-sm">
+        <p class="mb-2 text-white font-bold">
+            <span class="lang-zh lang-active">香港VSI有限公司</span>
+            <span class="lang-en">VSI Hong Kong Limited</span>
+            <span class="lang-jp">VSI香港株式会社</span>
+        </p>
+        <p>
+            <span class="lang-zh lang-active">© 2026 VSI HK。版權所有。</span>
+            <span class="lang-en">© 2026 VSI HK. All Rights Reserved.</span>
+            <span class="lang-jp">© 2026 VSI HK. 全著作権所有.</span>
+        </p>
+    </footer>
+
+    <script>
+        function switchLang(lang) {
+            // 切換所有帶語言標記的元素
+            document.querySelectorAll('[class*="lang-"]').forEach(el => {
+                el.classList.remove('lang-active', 'lang-inline-active');
+            });
+            
+            const activeElements = document.querySelectorAll('.lang-' + lang);
+            activeElements.forEach(el => {
+                if (el.tagName === 'SPAN') {
+                    el.classList.add('lang-inline-active');
+                } else {
+                    el.classList.add('lang-active');
+                }
+            });
+
+            // 更新按鈕樣式
+            ['zh', 'en', 'jp'].forEach(l => {
+                const btn = document.getElementById('btn-' + l);
+                if (l === lang) {
+                    btn.classList.add('text-blue-600', 'font-bold');
+                } else {
+                    btn.classList.remove('text-blue-600', 'font-bold');
+                }
+            });
+        }
+    </script>
