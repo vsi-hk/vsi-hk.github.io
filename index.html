@@ -5,17 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>香港VSI有限公司 | VSI Hong Kong Limited</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <style>
-        .hero-bg { 
-            background: linear-gradient(rgba(15, 23, 42, 0.8), rgba(15, 23, 42, 0.8)), 
-            url('https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&q=80&w=2070'); 
-            background-size: cover; 
-            background-position: center; 
-        }
-        .lang-zh, .lang-en, .lang-jp { display: none; }
-        .lang-active { display: block !important; }
-        .lang-inline-active { display: inline !important; }
-    </style>
+    <link rel="stylesheet" href="static/style.css">
 </head>
 <body class="bg-slate-50 text-slate-900 font-sans">
 
@@ -173,30 +163,6 @@
         </p>
     </footer>
 
-    <script>
-        function switchLang(lang) {
-            // 切換所有帶語言標記的元素
-            document.querySelectorAll('[class*="lang-"]').forEach(el => {
-                el.classList.remove('lang-active', 'lang-inline-active');
-            });
-            
-            const activeElements = document.querySelectorAll('.lang-' + lang);
-            activeElements.forEach(el => {
-                if (el.tagName === 'SPAN') {
-                    el.classList.add('lang-inline-active');
-                } else {
-                    el.classList.add('lang-active');
-                }
-            });
-
-            // 更新按鈕樣式
-            ['zh', 'en', 'jp'].forEach(l => {
-                const btn = document.getElementById('btn-' + l);
-                if (l === lang) {
-                    btn.classList.add('text-blue-600', 'font-bold');
-                } else {
-                    btn.classList.remove('text-blue-600', 'font-bold');
-                }
-            });
-        }
-    </script>
+    <script src="static/script.js"></script>
+</body>
+</html>
