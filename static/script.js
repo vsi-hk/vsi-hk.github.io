@@ -23,3 +23,7 @@ function switchLang(lang) {
         }
     });
 }
+
+document.addEventListener('DOMContentLoaded', function() {
+    switchLang('zh');
+});
