@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Audio - VSI Hong Kong Limited</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="static/style.css">
+</head>
+<body class="bg-slate-50 text-slate-900 font-sans">
+
+    <nav class="bg-white shadow-md sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+            <div class="text-2xl font-bold text-slate-800">
+                <a href="index.html">
+                    <span class="lang-zh">香港VSI有限公司</span>
+                    <span class="lang-en">VSI Hong Kong Limited</span>
+                    <span class="lang-jp">VSI香港株式会社</span>
+                </a>
+            </div>
+            <div class="hidden md:flex space-x-6 text-sm font-medium items-center">
+                <div class="space-x-4 mr-4">
+                    <a href="index.html#about" class="hover:text-blue-600">
+                        <span class="lang-zh">關於</span>
+                        <span class="lang-en">About</span>
+                        <span class="lang-jp">概要</span>
+                    </a>
+                    <a href="index.html#products" class="hover:text-blue-600">
+                        <span class="lang-zh">產品</span>
+                        <span class="lang-en">Products</span>
+                        <span class="lang-jp">製品</span>
+                    </a>
+                </div>
+                <div class="flex items-center">
+                    <a href="contact.html" class="text-white bg-blue-800 hover:bg-blue-700 px-4 py-2 rounded-md mr-4">
+                        <span class="lang-zh">联系我们</span>
+                        <span class="lang-en">Contact Us</span>
+                        <span class="lang-jp">お問い合わせ</span>
+                    </a>
+                    <div class="flex bg-slate-100 rounded-full px-3 py-1 space-x-3 border">
+                        <button onclick="switchLang('zh')" id="btn-zh" class="text-blue-600 font-bold">CN</button>
+                        <button onclick="switchLang('en')" id="btn-en" class="hover:text-blue-600">EN</button>
+                        <button onclick="switchLang('jp')" id="btn-jp" class="hover:text-blue-600">JP</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <main class="py-20 px-6 max-w-7xl mx-auto">
+        <div class="text-sm mb-8"><a href="index.html" class="text-blue-600 hover:underline">&larr; <span class="lang-zh">返回首頁</span><span class="lang-en">Back to Home</span><span class="lang-jp">ホームページへ戻る</span></a></div>
+
+        <section class="text-center max-w-4xl mx-auto">
+            <h1 class="text-4xl font-bold mb-4">
+                <span class="lang-zh">高保真音频传输方案</span>
+                <span class="lang-en">High-Fidelity Audio Transmission Solutions</span>
+                <span class="lang-jp">ハイフィデリティ・オーディオ伝送ソリューション</span>
+            </h1>
+            <p class="text-slate-600">
+                <span class="lang-zh">我们的音频线缆专为录音室和高端视听系统设计，提供零损耗的高品质音频传输。通过精选材料和优化工艺，我们的产品能够承受超过10万次的弯折和插拔，确保在长期使用中依然保持卓越的性能和耐用性。选择我们，为您的音频系统提供最可靠的连接。</span>
+                <span class="lang-en">Our audio cables are designed for recording studios and high-end audiovisual systems, providing zero-loss, high-quality audio transmission. Through selected materials and optimized processes, our products can withstand over 100,000 bending and mating cycles, ensuring exceptional performance and durability over long-term use. Choose us for the most reliable connection for your audio system.</span>
+                <span class="lang-jp">当社のオーディオケーブルは、レコーディングスタジオやハイエンドの視聴覚システム向けに設計されており、ゼロロスの高品質なオーディオ伝送を提供します。厳選された素材と最適化されたプロセスにより、当社の製品は10万回以上の曲げおよび嵌合サイクルに耐え、長期使用にわたって卓越した性能と耐久性を保証します。オーディオシステムに最も信頼性の高い接続をお選びください。</span>
+            </p>
+        </section>
+
+        <section class="py-20" id="technical-strengths">
+            <h2 class="text-3xl font-bold mb-12 text-center">
+                <span class="lang-zh">技术优势</span>
+                <span class="lang-en">Technical Strengths</span>
+                <span class="lang-jp">技術的利点</span>
+            </h2>
+            <div class="grid md:grid-cols-3 gap-12 text-center">
+                <div>
+                    <div class="text-blue-600 text-4xl mb-4">🎶</div>
+                    <h3 class="text-xl font-bold mb-2">
+                        <span class="lang-zh">零损耗传输</span>
+                        <span class="lang-en">Lossless Transmission</span>
+                        <span class="lang-jp">ロスレス伝送</span>
+                    </h3>
+                    <p class="text-slate-600 text-sm">
+                        <span class="lang-zh">高纯度无氧铜导体，真实还原音质细节。</span>
+                        <span class="lang-en">High-purity OFC conductors for authentic sound detail restoration.</span>
+                        <span class="lang-jp">本物の音のディテールを復元する高純度OFC導体。</span>
+                    </p>
+                </div>
+                <div>
+                    <div class="text-blue-600 text-4xl mb-4">💪</div>
+                    <h3 class="text-xl font-bold mb-2">
+                        <span class="lang-zh">卓越耐用</span>
+                        <span class="lang-en">High Durability</span>
+                        <span class="lang-jp">優れた耐久性</span>
+                    </h3>
+                    <p class="text-slate-600 text-sm">
+                        <span class="lang-zh">结构加固设计，轻松应对 100,000+ 次弯折测试。</span>
+                        <span class="lang-en">Reinforced structure withstands 100,000+ bending cycles.</span>
+                        <span class="lang-jp">100,000回以上の曲げサイクルに耐える強化構造。</span>
+                    </p>
+                </div>
+                <div>
+                    <div class="text-blue-600 text-4xl mb-4">🤫</div>
+                    <h3 class="text-xl font-bold mb-2">
+                        <span class="lang-zh">机械噪声抑制</span>
+                        <span class="lang-en">Mechanical Noise Suppression</span>
+                        <span class="lang-jp">機械的ノイズ抑制</span>
+                    </h3>
+                    <p class="text-slate-600 text-sm">
+                        <span class="lang-zh">专利工艺减少线材摩擦噪声，提供纯净音频环境。</span>
+                        <span class="lang-en">Patented process to minimize friction noise for a pure audio environment.</span>
+                        <span class="lang-jp">純粋なオーディオ環境のために摩擦ノイズを最小限に抑える特許取得済みのプロセス。</span>
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <section class="bg-slate-100 -mx-6 px-6 py-20" id="workflow">
+            <h2 class="text-3xl font-bold mb-12 text-center">
+                <span class="lang-zh">服务流程</span>
+                <span class="lang-en">Service Workflow</span>
+                <span class="lang-jp">サービスワークフロー</span>
+            </h2>
+            <div class="flex justify-center items-center space-x-4 md:space-x-8 text-center">
+                <div class="flex-1">
+                    <div class="bg-blue-600 text-white rounded-full w-16 h-16 flex items-center justify-center text-2xl font-bold mx-auto mb-2">1</div>
+                    <p class="font-semibold"><span class="lang-zh">咨询</span><span class="lang-en">Consult</span><span class="lang-jp">相談</span></p>
+                </div>
+                <div class="text-slate-400 text-2xl">&rarr;</div>
+                <div class="flex-1">
+                    <div class="bg-blue-600 text-white rounded-full w-16 h-16 flex items-center justify-center text-2xl font-bold mx-auto mb-2">2</div>
+                    <p class="font-semibold"><span class="lang-zh">设计</span><span class="lang-en">Design</span><span class="lang-jp">設計</span></p>
+                </div>
+                <div class="text-slate-400 text-2xl">&rarr;</div>
+                <div class="flex-1">
+                    <div class="bg-blue-600 text-white rounded-full w-16 h-16 flex items-center justify-center text-2xl font-bold mx-auto mb-2">3</div>
+                    <p class="font-semibold"><span class="lang-zh">打样</span><span class="lang-en">Prototype</span><span class="lang-jp">試作</span></p>
+                </div>
+                <div class="text-slate-400 text-2xl">&rarr;</div>
+                <div class="flex-1">
+                    <div class="bg-blue-600 text-white rounded-full w-16 h-16 flex items-center justify-center text-2xl font-bold mx-auto mb-2">4</div>
+                    <p class="font-semibold"><span class="lang-zh">量产</span><span class="lang-en">Production</span><span class="lang-jp">量産</span></p>
+                </div>
+            </div>
+        </section>
+
+        <section class="py-20 text-center">
+            <h2 class="text-3xl font-bold mb-4">
+                <span class="lang-zh">准备好开始了吗？</span>
+                <span class="lang-en">Ready to Get Started?</span>
+                <span class="lang-jp">始めましょうか？</span>
+            </h2>
+            <p class="text-slate-600 mb-8 max-w-2xl mx-auto">
+                <span class="lang-zh">让我们帮助您构建下一个可靠的连接解决方案。提交您的规格，我们的团队将在24小时内与您联系。</span>
+                <span class="lang-en">Let us help you build your next reliable connectivity solution. Submit your specs and our team will get in touch within 24 hours.</span>
+                <span class="lang-jp">次の信頼性の高い接続ソリューションの構築をお手伝いします。仕様を送信していただければ、24時間以内に当社のチームからご連絡いたします。</span>
+            </p>
+            <a href="contact.html" class="inline-block bg-blue-900 text-white font-bold py-4 px-8 rounded-lg shadow-lg hover:bg-blue-800 transition-colors">
+                <span class="lang-zh">提交规格并获取报价</span>
+                <span class="lang-en">Submit Specifications & Get a Quote</span>
+                <span class="lang-jp">お見積り依頼</span>
+            </a>
+        </section>
+
+    </main>
+
+    <footer class="bg-slate-900 text-slate-400 py-12 px-6 text-center text-sm">
+        <p class="mb-2 text-white font-bold">
+            <span class="lang-zh">香港VSI有限公司</span>
+            <span class="lang-en">VSI Hong Kong Limited</span>
+            <span class="lang-jp">VSI香港株式会社</span>
+        </p>
+        <p>
+            <span class="lang-zh">© 2026 VSI HK。版權所有。</span>
+            <span class="lang-en">© 2026 VSI HK. All Rights Reserved.</span>
+            <span class="lang-jp">© 2026 VSI HK. 全著作権所有.</span>
+        </p>
+    </footer>
+
+    <script src="static/script.js"></script>
+</body>
+</html>

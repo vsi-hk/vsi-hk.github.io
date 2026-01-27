@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact - VSI Hong Kong Limited</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="static/style.css">
+</head>
+<body class="bg-slate-50 text-slate-900 font-sans">
+
+    <nav class="bg-white shadow-md sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+            <div class="text-2xl font-bold text-slate-800">
+                <a href="index.html">
+                    <span class="lang-zh">香港VSI有限公司</span>
+                    <span class="lang-en">VSI Hong Kong Limited</span>
+                    <span class="lang-jp">VSI香港株式会社</span>
+                </a>
+            </div>
+            <div class="hidden md:flex space-x-6 text-sm font-medium items-center">
+                <div class="space-x-4 mr-4">
+                    <a href="index.html#about" class="hover:text-blue-600">
+                        <span class="lang-zh">關於</span>
+                        <span class="lang-en">About</span>
+                        <span class="lang-jp">概要</span>
+                    </a>
+                    <a href="index.html#products" class="hover:text-blue-600">
+                        <span class="lang-zh">產品</span>
+                        <span class="lang-en">Products</span>
+                        <span class="lang-jp">製品</span>
+                    </a>
+                </div>
+                <div class="flex items-center">
+                    <a href="contact.html" class="text-white bg-blue-800 hover:bg-blue-700 px-4 py-2 rounded-md mr-4">
+                        <span class="lang-zh">联系我们</span>
+                        <span class="lang-en">Contact Us</span>
+                        <span class="lang-jp">お問い合わせ</span>
+                    </a>
+                    <div class="flex bg-slate-100 rounded-full px-3 py-1 space-x-3 border">
+                        <button onclick="switchLang('zh')" id="btn-zh" class="text-blue-600 font-bold">CN</button>
+                        <button onclick="switchLang('en')" id="btn-en" class="hover:text-blue-600">EN</button>
+                        <button onclick="switchLang('jp')" id="btn-jp" class="hover:text-blue-600">JP</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <main class="py-20 px-6 max-w-4xl mx-auto">
+        <div class="text-sm mb-8"><a href="index.html" class="text-blue-600 hover:underline">&larr; <span class="lang-zh">返回首頁</span><span class="lang-en">Back to Home</span><span class="lang-jp">ホームページへ戻る</span></a></div>
+        
+        <section id="contact-form-section" class="bg-white p-8 rounded-lg shadow-md">
+            <h1 class="text-3xl font-bold mb-6 text-center">
+                <span class="lang-zh">提交您的需求</span>
+                <span class="lang-en">Submit Your Requirements</span>
+                <span class="lang-jp">ご要望を送信</span>
+            </h1>
+            <form id="contact-form">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    
+                    <!-- Contact Info -->
+                    <div class="md:col-span-2">
+                        <h2 class="text-xl font-semibold mb-4 border-b pb-2"><span class="lang-zh">联系信息</span><span class="lang-en">Contact Information</span><span class="lang-jp">連絡先情報</span></h2>
+                    </div>
+                    <div>
+                        <label for="name" class="block text-sm font-medium text-slate-700"><span class="lang-zh">姓名</span><span class="lang-en">Name</span><span class="lang-jp">お名前</span></label>
+                        <input type="text" id="name" name="name" required class="mt-1 block w-full px-3 py-2 bg-white border border-slate-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500">
+                    </div>
+                    <div>
+                        <label for="company" class="block text-sm font-medium text-slate-700"><span class="lang-zh">公司名称</span><span class="lang-en">Company Name</span><span class="lang-jp">会社名</span></label>
+                        <input type="text" id="company" name="company" class="mt-1 block w-full px-3 py-2 bg-white border border-slate-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500">
+                    </div>
+                    <div>
+                        <label for="email" class="block text-sm font-medium text-slate-700"><span class="lang-zh">官方邮箱</span><span class="lang-en">Official Email</span><span class="lang-jp">公式メール</span></label>
+                        <input type="email" id="email" name="email" required class="mt-1 block w-full px-3 py-2 bg-white border border-slate-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500">
+                    </div>
+                    <div>
+                        <label for="phone" class="block text-sm font-medium text-slate-700"><span class="lang-zh">电话号码</span><span class="lang-en">Phone Number</span><span class="lang-jp">電話番号</span></label>
+                        <input type="tel" id="phone" name="phone" class="mt-1 block w-full px-3 py-2 bg-white border border-slate-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500">
+                    </div>
+
+                    <!-- Technical Specs -->
+                    <div class="md:col-span-2">
+                        <h2 class="text-xl font-semibold mb-4 mt-6 border-b pb-2"><span class="lang-zh">技术规格</span><span class="lang-en">Technical Specifications</span><span class="lang-jp">技術仕様</span></h2>
+                    </div>
+                    <div>
+                        <label for="category" class="block text-sm font-medium text-slate-700"><span class="lang-zh">产品类别</span><span class="lang-en">Product Category</span><span class="lang-jp">製品カテゴリ</span></label>
+                        <select id="category" name="category" class="mt-1 block w-full px-3 py-2 bg-white border border-slate-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500">
+                            <option value="medical"><span class="lang-zh">医疗</span><span class="lang-en">Medical</span><span class="lang-jp">医療</span></option>
+                            <option value="communication"><span class="lang-zh">通信</span><span class="lang-en">Communication</span><span class="lang-jp">通信</span></option>
+                            <option value="audio"><span class="lang-zh">音频</span><span class="lang-en">Audio</span><span class="lang-jp">オーディオ</span></option>
+                            <option value="custom"><span class="lang-zh">其他定制</span><span class="lang-en">Custom</span><span class="lang-jp">その他カスタム</span></option>
+                        </select>
+                    </div>
+                    <div class="md:col-span-2">
+                        <label for="details" class="block text-sm font-medium text-slate-700"><span class="lang-zh">尺寸和细节</span><span class="lang-en">Dimensions & Details</span><span class="lang-jp">寸法と詳細</span></label>
+                        <textarea id="details" name="details" rows="4" class="mt-1 block w-full px-3 py-2 bg-white border border-slate-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500" placeholder_zh="请描述具体的尺寸、材料、公差要求等。" placeholder_en="Please describe the specific size, material, and tolerance requirements." placeholder_jp="具体的なサイズ、材質、公差要件などを記述してください。"></textarea>
+                    </div>
+
+                    <!-- Commercials -->
+                    <div class="md:col-span-2">
+                        <h2 class="text-xl font-semibold mb-4 mt-6 border-b pb-2"><span class="lang-zh">商务信息</span><span class="lang-en">Commercials</span><span class="lang-jp">商業情報</span></h2>
+                    </div>
+                    <div>
+                        <label for="target-price" class="block text-sm font-medium text-slate-700"><span class="lang-zh">目标单价</span><span class="lang-en">Target Price per Unit</span><span class="lang-jp">目標単価</span></label>
+                        <input type="text" id="target-price" name="target-price" class="mt-1 block w-full px-3 py-2 bg-white border border-slate-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500">
+                    </div>
+                    <div>
+                        <label for="volume" class="block text-sm font-medium text-slate-700"><span class="lang-zh">预估数量 (年/月)</span><span class="lang-en">Estimated Volume (Annual/Monthly)</span><span class="lang-jp">推定数量（年間/月間）</span></label>
+                        <input type="text" id="volume" name="volume" class="mt-1 block w-full px-3 py-2 bg-white border border-slate-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500">
+                    </div>
+
+                    <!-- Attachments -->
+                    <div class="md:col-span-2">
+                         <h2 class="text-xl font-semibold mb-4 mt-6 border-b pb-2"><span class="lang-zh">附件</span><span class="lang-en">Attachments</span><span class="lang-jp">添付ファイル</span></h2>
+                        <label for="file-upload" class="block text-sm font-medium text-slate-700"><span class="lang-zh">上传图纸/CAD文件</span><span class="lang-en">Upload Blueprints/CAD Files</span><span class="lang-jp">図面/CADファイルのアップロード</span></label>
+                        <input type="file" id="file-upload" name="file-upload" class="mt-1 block w-full text-sm text-slate-500 file:mr-4 file:py-2 file:px-4 file:rounded-full file:border-0 file:text-sm file:font-semibold file:bg-blue-50 file:text-blue-700 hover:file:bg-blue-100"/>
+                    </div>
+                </div>
+
+                <div class="mt-8 text-center">
+                    <button type="submit" class="w-full md:w-auto inline-block bg-blue-900 text-white font-bold py-4 px-8 rounded-lg shadow-lg hover:bg-blue-800 transition-colors">
+                        <span class="lang-zh">提交需求</span>
+                        <span class="lang-en">Submit Specifications</span>
+                        <span class="lang-jp">仕様を送信</span>
+                    </button>
+                </div>
+            </form>
+        </section>
+
+        <section id="success-message" class="hidden text-center py-20">
+             <div class="bg-green-100 border-l-4 border-green-500 text-green-700 p-6 rounded-lg shadow-md max-w-md mx-auto">
+                <h2 class="text-2xl font-bold mb-2"><span class="lang-zh">感谢您的提交！</span><span class="lang-en">Thank you!</span><span class="lang-jp">ありがとうございました！</span></h2>
+                <p><span class="lang-zh">VSI团队将在24小时内与您联系。</span><span class="lang-en">The VSI team will contact you within 24 hours.</span><span class="lang-jp">VSIチームが24時間以内にご連絡いたします。</span></p>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="bg-slate-900 text-slate-400 py-12 px-6 text-center text-sm">
+        <p class="mb-2 text-white font-bold">
+            <span class="lang-zh">香港VSI有限公司</span>
+            <span class="lang-en">VSI Hong Kong Limited</span>
+            <span class="lang-jp">VSI香港株式会社</span>
+        </p>
+        <p>
+            <span class="lang-zh">© 2026 VSI HK。版權所有。</span>
+            <span class="lang-en">© 2026 VSI HK. All Rights Reserved.</span>
+            <span class="lang-jp">© 2026 VSI HK. 全著作権所有.</span>
+        </p>
+    </footer>
+
+    <script src="static/script.js"></script>
+
+</body>
+</html>
