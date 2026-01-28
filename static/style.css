@@ -7,8 +7,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    min-height: 70vh;
-    padding: 4rem 0;
+    height: 70vh;
 }
 .lang-zh, .lang-en, .lang-jp { display: none; }
 .lang-active { display: block !important; }

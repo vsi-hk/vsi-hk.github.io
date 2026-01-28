@@ -1,4 +1,5 @@
 const categoryTranslations = {
+    '': { zh: '請選擇一個類別', en: 'Please select a category', jp: 'カテゴリを選択してください' },
     'medical': { zh: '醫療', en: 'Medical', jp: '医療' },
     'communication': { zh: '通信', en: 'Communication', jp: '通信' },
     'audio': { zh: '音頻', en: 'Audio', jp: 'オーディオ' },
@@ -33,6 +34,14 @@ function switchLang(lang) {
         }
     });
 
+    // Update logo text
+    document.querySelectorAll('.logo-text').forEach(el => {
+        const text = el.getAttribute('data-' + lang);
+        if (text) {
+            el.textContent = text;
+        }
+    });
+
     // Special handling for form placeholders on the contact page
     const detailsTextarea = document.getElementById('details');
     if (detailsTextarea) {
@@ -44,56 +53,14 @@ function switchLang(lang) {
     if (categoryDropdown) {
         for (const option of categoryDropdown.options) {
             const value = option.value;
-            option.textContent = categoryTranslations[value][lang];
+            if (categoryTranslations[value]) {
+                option.textContent = categoryTranslations[value][lang];
+            }
         }
-    }
-
-    // Update file input display
-    const fileUpload = document.getElementById('file-upload');
-    if (fileUpload) {
-        updateFileNameDisplay(fileUpload);
-    }
-}
-
-function updateFileNameDisplay(fileUpload) {
-    const fileNameDisplay = document.getElementById('file-name-display');
-    const lang = localStorage.getItem('language') || 'zh';
-
-    if (fileUpload.files.length > 0) {
-        fileNameDisplay.textContent = fileUpload.files[0].name;
-    } else {
-        const noFileChosenTexts = {
-            zh: '未選擇文件',
-            en: 'No file chosen',
-            jp: 'ファイルが選択されていません'
-        };
-        fileNameDisplay.textContent = noFileChosenTexts[lang];
     }
 }
 
 document.addEventListener('DOMContentLoaded', function() {
     const savedLang = localStorage.getItem('language') || 'zh';
     switchLang(savedLang);
-
-    const form = document.getElementById('contact-form');
-    if (form) {
-        const formSection = document.getElementById('contact-form-section');
-        const successMessage = document.getElementById('success-message');
-
-        form.addEventListener('submit', function(e) {
-            e.preventDefault(); 
-            if(formSection && successMessage) {
-                formSection.classList.add('hidden');
-                successMessage.classList.remove('hidden');
-                window.scrollTo(0, 0); 
-            }
-        });
-    }
-
-    const fileUpload = document.getElementById('file-upload');
-    if (fileUpload) {
-        fileUpload.addEventListener('change', function() {
-            updateFileNameDisplay(this);
-        });
-    }
 });
