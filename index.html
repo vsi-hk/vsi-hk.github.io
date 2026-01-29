@@ -10,31 +10,46 @@
 <body class="bg-slate-50 text-slate-900 font-sans">
 
     <nav class="bg-white shadow-md sticky top-0 z-50" style="z-index: 9999 !important;">
-        <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center flex-wrap">
+        <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
             <div class="text-2xl font-bold text-slate-800">
                 <a href="index.html">
                     <span class="logo-text" data-en="VSI Hong Kong Limited" data-zh="香港VSI有限公司" data-jp="VSI香港株式会社" style="font-family: 'Inter', sans-serif !important; font-size: 24px !important; font-weight: 700 !important;">香港VSI有限公司</span>
                 </a>
             </div>
-            <div class="flex flex-wrap justify-end space-x-2 md:space-x-6 text-sm font-medium items-center">
-                <div class="space-x-4 mr-4">
-                    <a href="#about" class="hover:text-blue-600">
-                        <span class="lang-zh">關於</span>
-                        <span class="lang-en">About</span>
-                        <span class="lang-jp">概要</span>
-                    </a>
+            <div class="hidden md:flex items-center space-x-6">
+                <a href="#about" class="hover:text-blue-600 text-sm font-medium">
+                    <span class="lang-zh">關於</span>
+                    <span class="lang-en">About</span>
+                    <span class="lang-jp">概要</span>
+                </a>
+                <a href="contact.html" class="text-white bg-blue-800 hover:bg-blue-700 px-4 py-2 rounded-md text-sm font-medium">
+                    <span class="lang-zh">聯繫我們</span>
+                    <span class="lang-en">Contact Us</span>
+                    <span class="lang-jp">お問い合わせ</span>
+                </a>
+                <div class="flex bg-slate-100 rounded-full px-3 py-1 space-x-3 border">
+                    <button onclick="switchLang('zh')" id="btn-zh" class="text-blue-600 font-bold text-sm">CN</button>
+                    <button onclick="switchLang('en')" id="btn-en" class="hover:text-blue-600 text-sm">EN</button>
+                    <button onclick="switchLang('jp')" id="btn-jp" class="hover:text-blue-600 text-sm">JP</button>
                 </div>
-                <div class="flex items-center">
-                    <a href="contact.html" class="text-white bg-blue-800 hover:bg-blue-700 px-4 py-2 rounded-md mr-4">
-                        <span class="lang-zh">聯繫我們</span>
-                        <span class="lang-en">Contact Us</span>
-                        <span class="lang-jp">お問い合わせ</span>
-                    </a>
-                    <div class="flex bg-slate-100 rounded-full px-3 py-1 space-x-3 border">
-                        <button onclick="switchLang('zh')" id="btn-zh" class="text-blue-600 font-bold">CN</button>
-                        <button onclick="switchLang('en')" id="btn-en" class="hover:text-blue-600">EN</button>
-                        <button onclick="switchLang('jp')" id="btn-jp" class="hover:text-blue-600">JP</button>
-                    </div>
+            </div>
+            <div class="md:hidden flex items-center">
+                <button id="mobile-menu-button" class="text-slate-800 hover:text-blue-600 focus:outline-none">
+                    <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden">
+            <a href="#about" class="block py-2 px-4 text-sm hover:bg-gray-200"><span class="lang-zh">關於</span><span class="lang-en">About</span><span class="lang-jp">概要</span></a>
+            <a href="contact.html" class="block py-2 px-4 text-sm hover:bg-gray-200"><span class="lang-zh">聯繫我們</span><span class="lang-en">Contact Us</span><span class="lang-jp">お問い合わせ</span></a>
+            <div class="px-4 py-2">
+                <div class="flex bg-slate-100 rounded-full px-3 py-1 space-x-3 border">
+                    <button onclick="switchLang('zh')" id="btn-zh-mobile" class="text-blue-600 font-bold w-full text-center">CN</button>
+                    <button onclick="switchLang('en')" id="btn-en-mobile" class="hover:text-blue-600 w-full text-center">EN</button>
+                    <button onclick="switchLang('jp')" id="btn-jp-mobile" class="hover:text-blue-600 w-full text-center">JP</button>
                 </div>
             </div>
         </div>

@@ -17,6 +17,8 @@ nav {
     .hero-bg {
         height: 70vh;
         padding: 0;
+        display: flex;
+        align-items: center;
     }
 }
 

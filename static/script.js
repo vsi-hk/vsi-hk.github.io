@@ -1,3 +1,15 @@
+document.addEventListener('DOMContentLoaded', function() {
+    const savedLang = localStorage.getItem('language') || 'zh';
+    switchLang(savedLang);
+
+    const menuButton = document.getElementById('mobile-menu-button');
+    const mobileMenu = document.getElementById('mobile-menu');
+
+    menuButton.addEventListener('click', function() {
+        mobileMenu.classList.toggle('hidden');
+    });
+});
+
 const categoryTranslations = {
     '': { zh: '請選擇一個類別', en: 'Please select a category', jp: 'カテゴリを選択してください' },
     'medical': { zh: '醫療', en: 'Medical', jp: '医療' },
@@ -22,14 +34,24 @@ function switchLang(lang) {
         el.style.display = 'inline';
     });
 
-    // Update button styles in the language switcher
+    // Update button styles in both desktop and mobile language switchers
     ['zh', 'en', 'jp'].forEach(l => {
         const btn = document.getElementById('btn-' + l);
+        const mobileBtn = document.getElementById('btn-' + l + '-mobile');
+        
         if (btn) {
             if (l === lang) {
                 btn.classList.add('text-blue-600', 'font-bold');
             } else {
                 btn.classList.remove('text-blue-600', 'font-bold');
+            }
+        }
+
+        if (mobileBtn) {
+            if (l === lang) {
+                mobileBtn.classList.add('text-blue-600', 'font-bold');
+            } else {
+                mobileBtn.classList.remove('text-blue-600', 'font-bold');
             }
         }
     });
@@ -59,8 +81,3 @@ function switchLang(lang) {
         }
     }
 }
-
-document.addEventListener('DOMContentLoaded', function() {
-    const savedLang = localStorage.getItem('language') || 'zh';
-    switchLang(savedLang);
-});
