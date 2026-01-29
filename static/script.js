@@ -8,6 +8,10 @@ document.addEventListener('DOMContentLoaded', function() {
     menuButton.addEventListener('click', function() {
         mobileMenu.classList.toggle('hidden');
     });
+
+    mobileMenu.addEventListener('click', function() {
+        mobileMenu.classList.add('hidden');
+    });
 });
 
 const categoryTranslations = {
