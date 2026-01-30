@@ -18,10 +18,18 @@ nav {
     top: 0;
     left: 0;
     width: 100%;
-    background: transparent !important;
+  }
+  body:not(.home) nav {
+    display: none;
+  }
+  body:not(.home) .logo-text {
+    display: none;
   }
   .logo-text {
-    color: white;
+    color: #1e293b !important; /* Default dark for mobile */
+  }
+  .home .logo-text {
+    color: white !important; /* White on homepage */
   }
   .hero {
     height: auto !important;
@@ -143,6 +151,7 @@ nav {
         top: 0;
         background-color: white;
         box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+        height: 5rem; /* 80px */
     }
     .logo-text {
         color: #1e293b;
@@ -157,6 +166,9 @@ nav {
 }
 
 /* Language switcher helpers */
+.lang-en {
+    letter-spacing: -0.025em; /* tracking-tight */
+}
 .lang-zh, .lang-en, .lang-jp { display: none; }
 .lang-active { display: block !important; }
 .lang-inline-active { display: inline !important; }
