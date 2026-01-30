@@ -18,10 +18,18 @@ nav {
     top: 0;
     left: 0;
     width: 100%;
-    background: transparent !important;
+    background: rgba(15, 23, 42, 0.5);
+    backdrop-filter: blur(8px);
+  }
+  body:not(.home) nav {
+    display: none;
+  }
+  body:not(.home) .logo-text {
+    display: none;
   }
   .logo-text {
-    color: white;
+    /* Force white logo on mobile so it doesn't blend with hero image */
+    color: white !important;
   }
   .hero {
     height: auto !important;
@@ -134,6 +142,9 @@ nav {
   #mobile-menu-button {
     color: white;
   }
+  #mobile-menu-button svg {
+    stroke: white !important;
+  }
 }
 
 /* Desktop Styles */
@@ -143,6 +154,7 @@ nav {
         top: 0;
         background-color: white;
         box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+        height: 5rem; /* 80px */
     }
     .logo-text {
         color: #1e293b;
@@ -157,6 +169,9 @@ nav {
 }
 
 /* Language switcher helpers */
+.lang-en {
+    letter-spacing: -0.025em; /* tracking-tight */
+}
 .lang-zh, .lang-en, .lang-jp { display: none; }
 .lang-active { display: block !important; }
 .lang-inline-active { display: inline !important; }
