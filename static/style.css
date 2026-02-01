@@ -21,8 +21,7 @@ nav {
     top: 0;
     left: 0;
     width: 100%;
-    background: rgba(15, 23, 42, 0.5);
-    backdrop-filter: blur(8px);
+    background: rgba(15, 23, 42, 0.95);
   }
   .logo-text {
     /* Force white logo on mobile so it doesn't blend with hero image */
@@ -63,25 +62,29 @@ nav {
   .hero .flex-wrap.justify-center > span:not([class*="cursor-pointer"]) { /* Separators */
     display: none;
   }
-  #about, #products {
+  #about, #solutions {
     padding-top: 3rem !important; /* py-12 */
     padding-bottom: 3rem !important; /* py-12 */
   }
   
   /* --- Mobile Menu Start --- */
   #mobile-menu {
-    position: absolute;
-    top: 100%;
+    position: fixed;
+    top: 80px;
     left: 0;
     right: 0;
     width: 100%;
     z-index: 100;
+    height: auto !important;
+    bottom: auto !important;
     
     background: rgba(15, 23, 42, 0.95);
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
     
-    max-height: 500px; /* Adjust as needed */
+    flex-direction: column !important;
+    justify-content: flex-start !important;
+    align-items: stretch !important;
+    
+    max-height: 200px;
     overflow: hidden;
     transition: max-height 0.4s ease-in-out;
   }
@@ -98,10 +101,11 @@ nav {
 
   #mobile-menu a {
       display: block;
-      padding: 1rem; /* py-4 is 1rem */
+      padding: 0.75rem;
       text-align: center;
       color: white;
       border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+      width: 100%;
   }
 
   #mobile-menu a:hover {
@@ -110,30 +114,37 @@ nav {
 
   /* Language switcher container */
   #mobile-menu > div {
-      padding: 1.5rem 0;
+      padding: 0.75rem;
+      display: flex;
+      justify-content: center;
+      width: 100%;
   }
 
   #mobile-menu > div > div {
       background: transparent;
       border: none;
       justify-content: center;
+      display: flex;
+      gap: 0.5rem;
   }
 
-  #mobile-menu button {
-      min-height: 44px;
+    /* Scope language-toggle button styles so primary menu buttons keep their utility sizing */
+    #mobile-menu > div button {
+      min-height: 32px;
       color: white;
       background-color: rgba(255, 255, 255, 0.1);
       border-radius: 9999px;
-      padding: 0 1.5rem;
+      padding: 0 1rem;
       border: 1px solid transparent;
-  }
+      font-size: 0.875rem;
+    }
 
-  #mobile-menu button.font-bold {
+    #mobile-menu > div button.font-bold {
       font-weight: 700;
       border-color: #3b82f6 !important; /* Tailwind blue-600 */
       background-color: transparent !important;
       color: #3b82f6 !important;
-  }
+    }
   /* --- Mobile Menu End --- */
 
   #mobile-menu-button {
@@ -167,10 +178,21 @@ nav {
 
 /* Language switcher helpers */
 .lang-en, .lang-jp {
-    display: none;
+  display: none;
 }
-.lang-jp {
-    display: inline-block !important;
+
+/* Button active state for language selector */
+.lang-btn--active {
+  color: #3b82f6 !important; /* Tailwind blue-600 */
+  font-weight: 700;
+}
+
+/* Mobile menu explicit open state (works together with Tailwind's hidden utility) */
+#mobile-menu.open {
+  display: flex !important;
+  max-height: 100vh;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
 }
 
 .hidden.md\:flex.items-center.space-x-10 a {
@@ -185,8 +207,13 @@ nav {
   transform: translateY(-5px);
   box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
 }
-@media (max-width: 767px) {
-    .home .site-nav { background: transparent !important; shadow: none !important; }
-    .home .logo-text { color: white !important; }
-    .home #mobile-menu-button { color: white !important; }
+
+/* Solutions submenu styling */
+#solutions-submenu.hidden {
+  display: none !important;
 }
+
+#solutions-submenu:not(.hidden) {
+  display: block !important;
+}
+
