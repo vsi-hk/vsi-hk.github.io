@@ -94,7 +94,7 @@ nav {
     left: 0;
     right: 0;
     width: 100%;
-    z-index: 100;
+    z-index: 10000;
     height: auto !important;
     bottom: auto !important;
     
@@ -124,7 +124,6 @@ nav {
       padding: 0.75rem;
       text-align: center;
       color: white;
-      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
       width: 100%;
   }
 
@@ -149,22 +148,6 @@ nav {
   }
 
     /* Scope language-toggle button styles so primary menu buttons keep their utility sizing */
-    #mobile-menu > div button {
-      min-height: 32px;
-      color: white;
-      background-color: rgba(255, 255, 255, 0.1);
-      border-radius: 9999px;
-      padding: 0 1rem;
-      border: 1px solid transparent;
-      font-size: 0.875rem;
-    }
-
-    #mobile-menu > div button.font-bold {
-      font-weight: 700;
-      border-color: #3b82f6 !important; /* Tailwind blue-600 */
-      background-color: transparent !important;
-      color: #3b82f6 !important;
-    }
   /* --- Mobile Menu End --- */
 
   #mobile-menu-button {
@@ -237,3 +220,16 @@ nav {
   display: block !important;
 }
 
+
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+    .hero-bg {
+        padding-top: 180px !important; /* Forces more breathing room on Retina */
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    .hero-bg h1 {
+        margin-top: 2rem; /* Separates the title from the navbar */
+    }
+}
