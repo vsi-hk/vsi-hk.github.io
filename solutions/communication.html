@@ -5,7 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Communication - VSI Hong Kong Limited</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="../static/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../static/style.css?v=1.1">
 </head>
 <body class="bg-slate-50 text-slate-900 font-sans pt-20">
 
@@ -53,7 +54,7 @@
                 <span class="lang-en">Contact Us</span>
                 <span class="lang-jp">お問い合わせ</span>
             </a>
-            <div class="flex bg-slate-100 rounded-full px-4 py-1 space-x-3 border" style="font-family: 'Montserrat', sans-serif; cursor: pointer !important; z-index: 10001 !important;">
+            <div class="flex bg-slate-100 rounded-full px-4 py-1 space-x-3 border" style="font-family: 'Montserrat', sans-serif; cursor: pointer !important; z-index: 10001 !important;flex-shrink: 0;" >
                 <button data-lang-btn data-lang="zh" onclick="switchLang('zh')" class="lang-btn text-slate-600 text-sm" aria-pressed="false">CN</button>
                 <button data-lang-btn data-lang="en" onclick="switchLang('en')" class="lang-btn text-slate-600 text-sm" aria-pressed="false">EN</button>
                 <button data-lang-btn data-lang="jp" onclick="switchLang('jp')" class="lang-btn text-slate-600 text-sm" aria-pressed="false">JP</button>
@@ -66,22 +67,48 @@
         </div>
     </div>
 </nav>
-<div id="mobile-menu" class="hidden fixed inset-0 z-[10000] bg-slate-950 flex flex-col items-center justify-start space-y-2">
+<div id="mobile-menu" class="hidden fixed inset-0 z-[10000] bg-slate-950 flex flex-col items-center justify-center p-4">
     <button id="close-menu" class="absolute top-4 right-4 text-white p-2">
         <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-width="2.5" d="M6 18L18 6M6 6l12 12"/></svg>
     </button>
-    <a href="../index.html#about" class="text-lg text-white font-bold pt-12 w-full text-center"><span class="lang-zh">關於</span><span class="lang-en">About</span><span class="lang-jp">概要</span></a>
-    <button id="solutions-toggle" class="text-lg text-white font-bold w-full px-6 py-3 border-t border-b border-slate-700 hover:bg-slate-800 transition-colors flex items-center justify-center gap-2"><span><span class="lang-zh">解決方案</span><span class="lang-en">Solutions</span><span class="lang-jp">ソリューション</span></span><svg id="solutions-toggle-icon" class="w-5 h-5 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 9l6 6 6-6"></path></svg></button>
-    <div id="solutions-submenu" class="hidden w-full bg-slate-900 border-b border-slate-700">
-        <a href="audio.html" class="block text-base text-slate-300 font-semibold py-3 px-8 hover:bg-slate-800 hover:text-white transition-colors border-t border-slate-700"><span class="lang-zh">音頻</span><span class="lang-en">Audio</span><span class="lang-jp">オーディオ</span></a>
-        <a href="medical.html" class="block text-base text-slate-300 font-semibold py-3 px-8 hover:bg-slate-800 hover:text-white transition-colors border-t border-slate-700"><span class="lang-zh">醫療</span><span class="lang-en">Medical</span><span class="lang-jp">医療</span></a>
-        <a href="communication.html" class="block text-base text-slate-300 font-semibold py-3 px-8 hover:bg-slate-800 hover:text-white transition-colors border-t border-slate-700"><span class="lang-zh">通訊</span><span class="lang-en">Communication</span><span class="lang-jp">通信</span></a>
+    
+    <div class="w-full flex flex-col items-center justify-center flex-grow">
+        <a href="../index.html#about" class="w-full text-center py-5 text-xl font-bold text-white block transition-colors">
+            <span class="lang-zh">關於</span><span class="lang-en">About</span><span class="lang-jp">概要</span>
+        </a>
+
+        <button id="solutions-toggle" class="w-full py-5 text-xl font-bold text-white flex justify-center items-center gap-2 transition-colors border-none bg-transparent pl-5">
+            <span>
+                <span class="lang-zh">解決方案</span><span class="lang-en">Solutions</span><span class="lang-jp">ソリューション</span>
+            </span>
+            <svg id="solutions-toggle-icon" class="w-5 h-5 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 9l6 6 6-6"></path>
+            </svg>
+        </button>
+
+        <div id="solutions-submenu" class="hidden w-full bg-slate-900/30 rounded-lg py-2">
+            <a href="audio.html" class="block text-blue-400 text-base py-3 text-center hover:text-blue-300">
+                <span class="lang-zh">音頻</span><span class="lang-en">Audio</span><span class="lang-jp">オーディオ</span>
+            </a>
+            <a href="medical.html" class="block text-blue-400 text-base py-3 text-center hover:text-blue-300">
+                <span class="lang-zh">醫療</span><span class="lang-en">Medical</span><span class="lang-jp">医療</span>
+            </a>
+            <a href="communication.html" class="block text-blue-400 text-base py-3 text-center hover:text-blue-300">
+                <span class="lang-zh">通訊</span><span class="lang-en">Communication</span><span class="lang-jp">通信</span>
+            </a>
+        </div>
+
+        <a href="../contact.html" class="w-full text-center py-5 text-xl font-bold text-white block transition-colors border-b border-white/10">
+            <span class="lang-zh">聯繫我們</span><span class="lang-en">Contact Us</span><span class="lang-jp">お問い合わせ</span>
+        </a>
     </div>
-    <a href="../contact.html" class="text-lg text-white font-bold w-full text-center py-3"><span class="lang-zh">聯繫我們</span><span class="lang-en">Contact Us</span><span class="lang-jp">お問い合わせ</span></a>
-    <div class="flex space-x-6 pt-4 border-t border-white/10 mt-4">
-        <button data-lang-btn data-lang="zh" onclick="switchLang('zh')" class="lang-btn text-white text-sm" aria-pressed="false">CN</button>
-        <button data-lang-btn data-lang="en" onclick="switchLang('en')" class="lang-btn text-white text-sm" aria-pressed="false">EN</button>
-        <button data-lang-btn data-lang="jp" onclick="switchLang('jp')" class="lang-btn text-white text-sm" aria-pressed="false">JP</button>
+
+    <div class="w-full pb-8">
+        <div class="flex justify-center space-x-6">
+            <button data-lang-btn data-lang="zh" onclick="switchLang('zh')" class="lang-btn text-white text-sm font-semibold opacity-80 hover:opacity-100">CN</button>
+            <button data-lang-btn data-lang="en" onclick="switchLang('en')" class="lang-btn text-white text-sm font-semibold opacity-80 hover:opacity-100">EN</button>
+            <button data-lang-btn data-lang="jp" onclick="switchLang('jp')" class="lang-btn text-white text-sm font-semibold opacity-80 hover:opacity-100">JP</button>
+        </div>
     </div>
 </div>
 
